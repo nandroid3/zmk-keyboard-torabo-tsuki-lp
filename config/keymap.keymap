@@ -23,7 +23,7 @@
 &trans  &kp Q      &kp W           &kp E     &kp R         &kp T                                 &kp Y   &kp U   &kp I      &kp O      &kp P                      &trans
 &trans  &kp A      &kp S           &kp D     &kp F         &kp G   &trans            &trans      &kp H   &kp J   &kp K      &kp L      &kp MINUS                  &trans
 &trans  &kp Z      &kp X           &kp C     &kp V         &kp B   &kp SPACE         &kp RET     &kp N   &kp M   &kp COMMA  &kp DOT    &lt 1 LANG_ZENKAKUHANKAKU  &trans
-&trans  &kp LCTRL  &kp LEFT_SHIFT  &kp LALT  &kp LEFT_WIN  &mo 2   &kp LEFT_CONTROL  &kp RSHIFT  &mo 3   &trans  &trans     &mkp LCLK  &mkp RCLK                  &trans
+&trans  &kp LCTRL  &kp LEFT_SHIFT  &kp LALT  &kp LEFT_WIN  &mo 2   &kp LEFT_CONTROL  &kp RSHIFT  &mo 3   &trans  &trans     &mkp LCLK  &msc MOVE_Y(20)            &trans
             >;
         };
 
