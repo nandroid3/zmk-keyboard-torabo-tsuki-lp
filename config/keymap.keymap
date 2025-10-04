@@ -12,6 +12,11 @@
             key-positions = <28 29>;
             layers = <2>;
         };
+
+        BTLayer {
+            bindings = <&sl 1>;
+            key-positions = <54 55>;
+        };
     };
 
     keymap {
@@ -54,6 +59,16 @@
 &trans  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5   &trans  &trans         &kp F6        &kp LEFT_ARROW  &kp UP_ARROW    &kp RIGHT  &kp PAGE_UP    &trans
 &trans  &kp F7        &kp F8        &kp F9        &kp F10       &kp F11  &trans  &kp BACKSPACE  &kp F12       &kp HOME        &kp DOWN_ARROW  &kp END    &kp PAGE_DOWN  &trans
 &trans  &trans        &trans        &trans        &trans        &trans   &trans  &trans         &trans        &trans          &trans          &trans     &trans         &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans        &trans        &trans        &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_PRV    &bt BT_NXT    &none         &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
