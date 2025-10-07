@@ -2,8 +2,21 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
+/ {
+    input_processors {
+        layer4_scroll_processor: layer4_scroll_processor {
+            compatible = "zmk,input-processor-layer-conditionals";
+            layer-conditionals {
+                when-layers = <4>;
+                processors = <&zip_xy_to_scroll_mapper &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+            };
+            fallback-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+        };
+    };
+};
+
 &trackball_listener {
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+    input-processors = <&layer4_scroll_processor>;
 };
 
 &size_s_transform {
