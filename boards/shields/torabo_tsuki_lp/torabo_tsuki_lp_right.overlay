@@ -3,17 +3,23 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 &trackball_listener {
+    layers = <0 1 2 3>;
     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 };
 
-scroller {
-    layers = <4>;  //有効化するレイヤーの指定
-    input-processors = 
-        // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,     //X軸とY軸の入れ替え
-        <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,       //X軸反転
-        <&zip_xy_to_scroll_mapper>,                         //スクロールモードに変更
-        <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   //スクロールのX軸反転
-        <&zip_scroll_scaler 1 5>;                           //スクロール量を1/4倍
+/ {
+    trackball_listener_scroll: trackball_listener_scroll {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+        status = "okay";
+        layers = <4>;
+        input-processors = <
+            &zip_xy_transform (INPUT_TRANSFORM_X_INVERT)
+            &zip_xy_to_scroll_mapper
+            &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT)
+            &zip_scroll_scaler 1 5
+        >;
+    };
 };
 
 &size_s_transform {
