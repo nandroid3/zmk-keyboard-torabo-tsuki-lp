@@ -26,5 +26,7 @@ include:
 #    snippet: "studio-rpc-usb-uart split-trackball-listner"
 #    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
 #    artifact-name: torabo_tsuki_lp_double_ball_right_central
-  - board: bmp_boost
-    shield: settings_reset
+#  - board: bmp_boost
+#    shield: settings_reset
+# 注意: settings_reset のビルドは zmk-component-bmp-boost との依存関係の問題で
+# CI でエラーが発生する可能性があります。必要に応じて手動でビルドしてください。
