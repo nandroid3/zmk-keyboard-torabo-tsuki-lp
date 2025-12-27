@@ -23,6 +23,12 @@
 - `README.md` の通り、**keymap-editor** および **ZMK Studio** で編集できます。
   - シールド定義に `studio` 機能が含まれています（`boards/shields/torabo_tsuki_lp/torabo_tsuki_lp.zmk.yml`）。
 
+## マウススクロール移動量の調整
+- 右/左両シールドの `boards/shields/torabo_tsuki_lp/*.overlay` 内では `trackball_listener` の `scroller` に `zip_xy_to_scroll_mapper` を取り込んでおり、`layer_4_scroll` で有効になります。
+- 移動量を変えたい場合は同じ `scroller` の `input-processors` に `zip_scroll_scaler` を挟み、分子・分母を指定して倍率を変更します（例：`&zip_scroll_scaler 3 2` で 1.5 倍）。
+- `zip_scroll_scaler` の定義は `app/dts/input/processors/transform.dtsi`（ZMK v0.2）から参照され、`track-remainders` を使うと滑らかな倍率調整ができます。
+- スクロール量を変更したら再ビルドして、このレイヤーが有効な側の UF2 を書き込んでください。
+
 ## 付属スニペット
 - `snippets/split-trackball`: `EXTRA_DTC_OVERLAY_FILE` に `split-trackball.overlay` を追加
 - `snippets/split-trackball-listner`: `EXTRA_DTC_OVERLAY_FILE` に `split-trackball-listner.overlay` を追加
