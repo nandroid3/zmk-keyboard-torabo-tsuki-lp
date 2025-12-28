@@ -34,4 +34,4 @@
 - `snippets/split-trackball-listner`: `EXTRA_DTC_OVERLAY_FILE` に `split-trackball-listner.overlay` を追加
 
 ## トラブル時
-- **設定初期化**: `build.yaml` に `shield: settings_reset` のビルドが含まれていますが、`zmk-component-bmp-boost` との依存関係の問題でCIビルドでエラーが発生する可能性があります。必要に応じて手動でビルドしてください（ペアリング情報などのリセット用途）。
+- **設定初期化**: `build.yaml` に `shield: settings_reset` のビルドが含まれています（ペアリング情報などのリセット用途）。
