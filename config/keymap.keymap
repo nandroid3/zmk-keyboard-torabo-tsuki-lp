@@ -1,7 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
 / {
@@ -20,11 +19,11 @@
 
         layer_0_default {
             bindings = <
-&trans  &trans        &trans          &trans    &trans     &trans                                     &trans            &trans  &trans     &trans    &trans                     &trans
-&trans  &kp Q         &kp W           &kp E     &kp R      &kp T                                      &kp Y             &kp U   &kp I      &kp O     &kp P                      &trans
-&trans  &kp A         &kp S           &kp D     &kp F      &kp G               &trans     &trans      &kp H             &kp J   &kp K      &kp L     &kp MINUS                  &trans
-&trans  &kp Z         &kp X           &kp C     &kp V      &kp B               &kp TAB    &kp RET     &kp N             &kp M   &kp COMMA  &kp DOT   &lt 1 LANG_ZENKAKUHANKAKU  &trans
-&trans  &kp LEFT_WIN  &kp LEFT_SHIFT  &kp LALT  &kp LCTRL  &lt 2 INT_MUHENKAN  &kp SPACE  &kp RSHIFT  &lt 3 INT_HENKAN  &trans  &trans     &mkp MB1  &sl 4                      &trans
+&trans  &trans          &trans        &trans  &trans        &trans                                     &trans            &trans  &trans     &trans    &trans                     &trans
+&trans  &kp Q           &kp W         &kp E   &kp R         &kp T                                      &kp Y             &kp U   &kp I      &kp O     &kp P                      &trans
+&trans  &kp A           &kp S         &kp D   &kp F         &kp G               &trans     &trans      &kp H             &kp J   &kp K      &kp L     &kp MINUS                  &trans
+&trans  &kp Z           &kp X         &kp C   &kp V         &kp B               &kp SPACE  &kp RET     &kp N             &kp M   &kp COMMA  &kp DOT   &lt 1 LANG_ZENKAKUHANKAKU  &trans
+&trans  &kp LEFT_SHIFT  &kp LEFT_ALT  &to 4   &kp LEFT_WIN  &lt 2 INT_MUHENKAN  &kp LCTRL  &kp RSHIFT  &lt 3 INT_HENKAN  &trans  &trans     &mkp MB1  &sl 4                      &trans
             >;
         };
 
@@ -60,11 +59,11 @@
 
         layer_4_scroll {
             bindings = <
-&trans  &trans        &trans        &trans        &trans  &trans                      &trans  &trans    &trans    &trans    &trans  &trans
-&trans  &bt BT_PRV    &bt BT_NXT    &none         &trans  &trans                      &trans  &trans    &trans    &trans    &trans  &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans  &trans
-&trans  &trans        &trans        &trans        &trans  &trans  &bt BT_CLR  &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans
-&trans  &trans        &trans        &trans        &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans  &trans
+&trans  &trans        &trans        &trans        &trans  &trans                      &trans                &trans                 &trans            &trans             &trans  &trans
+&trans  &bt BT_PRV    &bt BT_NXT    &none         &trans  &trans                      &trans                &trans                 &trans            &trans             &trans  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &trans      &trans  &kp LC(LG(LA(LEFT)))  &kp LG(LC(LA(RIGHT)))  &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))  &trans  &trans
+&trans  &trans        &trans        &trans        &trans  &trans  &bt BT_CLR  &trans  &trans                &mkp MB1               &mkp MB3          &mkp MB2           &trans  &trans
+&trans  &trans        &trans        &trans        &trans  &trans  &trans      &trans  &trans                &trans                 &trans            &trans             &trans  &trans
             >;
         };
     };
