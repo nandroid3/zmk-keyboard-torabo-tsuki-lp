@@ -59,11 +59,11 @@
 
         Layer4_Mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans    &trans           &trans       &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &none   &none     &kp LS(LC(TAB))  &kp LC(TAB)  &none   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &none   &mkp MB1  &mkp MB3         &mkp MB2     &none   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &none   &mkp MB1  &mkp MB3         &mkp MB2     &none   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans           &trans       &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans          &trans    &trans           &trans       &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &none           &none     &kp LS(LC(TAB))  &kp LC(TAB)  &kp RIGHT_SHIFT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &msc SCRL_UP    &mkp MB1  &mkp MB3         &mkp MB2     &none            &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &msc SCRL_DOWN  &mkp MB1  &mkp MB3         &mkp MB2     &none            &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans    &trans           &trans       &trans           &trans
             >;
         };
 
