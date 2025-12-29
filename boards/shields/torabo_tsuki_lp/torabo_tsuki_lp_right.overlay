@@ -5,7 +5,7 @@
 &trackball_listener {
     input-processors = <
         &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
-        &zip_xy_scaler 4 10 /* 0.4倍 */
+        &zip_xy_scaler 6 10 /* 0.6倍 */
     >;
 
     scroller {
