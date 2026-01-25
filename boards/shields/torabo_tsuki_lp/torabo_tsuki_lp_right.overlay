@@ -13,7 +13,7 @@
         input-processors = <
             &zip_xy_transform (INPUT_TRANSFORM_X_INVERT)
             &zip_xy_to_scroll_mapper
-            &zip_scroll_scaler 15 100 /* 15% */
+            &zip_scroll_scaler 10 100 /* 10% */
         >;
     };
 };
